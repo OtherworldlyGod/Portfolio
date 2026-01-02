@@ -9,7 +9,6 @@ export default function Contact() {
       <Container>
         <div ref={ref} className="reveal flex flex-col md:flex-row justify-between gap-12">
           
-          {/* Left Side: Call to Action & Email */}
           <div className="max-w-xl">
             <h2 className="text-3xl font-semibold mb-6">Let's Connect</h2>
             <p className="text-white/70 mb-8 text-lg leading-relaxed">
@@ -29,10 +28,8 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right Side: Social Links & Info */}
           <div className="flex flex-col gap-8 md:text-right">
-            
-            {/* Socials */}
+          
             <div className="space-y-4">
               <p className="text-sm text-white/50 uppercase tracking-wider font-medium">On the web</p>
               <div className="flex flex-col md:items-end gap-3 text-white/80">
@@ -45,7 +42,7 @@ export default function Contact() {
                   GitHub
                 </a>
                 <a 
-                  href="https://www.linkedin.com/in/vedant-wade-b6a2b1258/" /* ADD YOUR LINKEDIN URL HERE */
+                  href="https://www.linkedin.com/in/vedant-wade-b6a2b1258/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="hover:text-white hover:underline decoration-white/30 underline-offset-4 w-max"
@@ -53,7 +50,7 @@ export default function Contact() {
                   LinkedIn
                 </a>
                 <a 
-                  href="https://www.codechef.com/users/sane_hitler_18" /* ADD YOUR CODECHEF URL HERE */
+                  href="https://www.codechef.com/users/sane_hitler_18" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="hover:text-white hover:underline decoration-white/30 underline-offset-4 w-max"
@@ -63,7 +60,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Location */}
             <div className="space-y-1">
               <p className="text-sm text-white/50 uppercase tracking-wider font-medium">Based In</p>
               <p className="text-white/90">Pune, India</p>
@@ -71,8 +67,7 @@ export default function Contact() {
           </div>
 
         </div>
-        
-        {/* Footer Note */}
+       
         <div className="mt-24 pt-8 border-t border-white/5 text-center text-white/40 text-sm">
           <p>&copy; {new Date().getFullYear()} Vedant Wade. Built with React & Tailwind.</p>
         </div>

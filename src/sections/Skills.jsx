@@ -1,5 +1,5 @@
 import Container from "../components/Container";
-import useReveal from "../hooks/useReveal"; // Adjust path if needed
+import useReveal from "../hooks/useReveal";
 
 const SKILLS = [
   {
@@ -36,7 +36,7 @@ export default function Skills() {
 
   return (
     <section className="py-24 border-t border-white/10 relative overflow-hidden">
-      {/* Background glow */}
+
       <div className="absolute top-20 left-0 w-[300px] h-[300px] bg-purple-500/5 rounded-full blur-[80px] -z-10" />
 
       <Container>

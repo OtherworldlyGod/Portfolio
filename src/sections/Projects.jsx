@@ -1,6 +1,6 @@
 import Container from "../components/Container";
 import useReveal from "../hooks/useReveal"; 
-import SpotlightCard from "../components/SpotlightCard"; // Ensure you have this component from earlier
+import SpotlightCard from "../components/SpotlightCard";
 
 const PROJECTS = [
   {
@@ -9,7 +9,7 @@ const PROJECTS = [
     "Built a backend-focused full-stack system with a decoupled architecture, where a Node.js REST API handles authentication (JWT), image uploads, and user data, while a Dockerized Python TensorFlow service performs model inference. Designed for modularity, service isolation, and clean backend integration.",
   tech: ["React", "Node.js", "TensorFlow", "MongoDB", "Docker", "JWT"],
   link: "https://github.com/OtherworldlyGod/BDT-Project",
-  image: "/images/dr-project.png"
+  image: `${import.meta.env.BASE_URL}images/dr-project.png`
 }
 ,
   {
@@ -18,7 +18,7 @@ const PROJECTS = [
       "Designed and implemented a modular quiz game using Pygame with explicit game-state management, custom event handling, and reusable components. The project won 1st Prize among 600+ participants for clean architecture and code quality.",
     tech: ["Python", "Pygame"],
     link: null,
-    image: "/images/quiz-game.png"
+    image: `${import.meta.env.BASE_URL}images/quiz-game.png`
   },
   {
     title: "Intelligent Code Reviewer",
@@ -26,7 +26,7 @@ const PROJECTS = [
       "Developed a prototype intelligent code refactoring tool that analyzes source code and generates improvement suggestions using transformer-based language models. Focused on structured code input, explainable refactoring output, and a clean separation between analysis logic and UI.",
     tech: ["Python", "Transformers", "Gradio", "CodeLlama"],
     link: null,
-    image: "/images/ai-code.png"
+    image: `${import.meta.env.BASE_URL}images/ai-code.png`
   },
 ];
 
@@ -47,7 +47,6 @@ export default function Projects() {
               <SpotlightCard key={index} className="p-0 border-white/10 bg-white/[0.02]">
                 <div className="flex flex-col md:flex-row items-stretch min-h-[300px]">
                   
-                  {/* Image Side (Only renders if 'image' exists) */}
                   {project.image && (
                     <div className="w-full md:w-[45%] relative border-b md:border-b-0 md:border-r border-white/10 overflow-hidden group">
                       <img 
@@ -55,12 +54,10 @@ export default function Projects() {
                         alt={project.title} 
                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
-                      {/* Dark overlay that fades out on hover */}
                       <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500" />
                     </div>
                   )}
 
-                  {/* Text Side */}
                   <div className={`flex flex-col justify-between p-8 ${project.image ? 'md:w-[55%]' : 'w-full'}`}>
                     <div>
                       <h3 className="text-2xl font-semibold mb-3 text-white">
@@ -78,8 +75,6 @@ export default function Projects() {
                         ))}
                       </div>
                     </div>
-
-                    {/* Only show the button if project.link exists */}
 {project.link && (
   <a
     href={project.link}
