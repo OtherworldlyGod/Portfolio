@@ -28,7 +28,7 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-4">
               <a
-                href={`${import.meta.env.BASE_URL}Vedant_resume.pdf`}
+                href={`${import.meta.env.BASE_URL}Vedant_Resume.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-7 py-3 bg-white text-black font-medium rounded-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
